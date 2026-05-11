@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-5cec2947","path":"/ranking/reweights/2025/September-2025.html","title":"Monthly Reweight - 14 September 2025","lang":"en-US","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1778520391000},"filePathRelative":"ranking/reweights/2025/September-2025.md"}');export{e as data};
