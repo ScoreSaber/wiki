@@ -27,105 +27,105 @@ title: Маппинг критерии
 
 ### Setup
 
-**Мапсет**: набор файлов сложностей в формате .dat с одним файлом info.dat, который на них ссылается.  
-**Распределение сложностей**: набор уровней сложности, присутствующих в мапсете. Например, мапсет с тремя сложностями в виде Normal, Hard и Expert - имеет распредление из трёх уровней сложности.
-**Игровые модификаторы**: внутриигровые модификаторы по типу Disappearing Arrows, Ghost Notes, Faster Song, и т.д.  
-**Игровой режим**: режимы 360 градусов, 90 градусов, Стандартный, одноручный, и т.д.  
-**Сетка 4x3**: допустимые 12 позиций для размещения нот в режиме Standard.
+**Мапсет (Mapset)**: набор файлов сложностей в формате .dat с одним файлом info.dat, который на них ссылается.  
+**Распределение сложностей (Difficulty Spread)**: набор уровней сложности, присутствующих в мапсете. Например, мапсет с тремя сложностями в виде Normal, Hard и Expert - имеет распредление из трёх уровней сложности.
+**Игровые модификаторы (Game Modifiers)**: внутриигровые модификаторы по типу Disappearing Arrows, Ghost Notes, Faster Song, и т.д.  
+**Игровой режим (Game mode)**: режимы 360 градусов, 90 градусов, Стандартный, одноручный, и т.д.  
+**Сетка 4x3 (4x3 Grid)**: допустимые 12 позиций для размещения нот в режиме Standard.
 
 ### Тайминг
 
 **BPM (БПМ)**: Beats Per Minute (удары в минуту). Определяет темп песни.  
-**Вариативный BPM**: Определяет темп песни, но может нерегулярно меняться с одного значения на другое.  
-**Оффсет**: разница во времени между началом аудиофайла и первым битом в песне, используется в редакторе для выравнивания линий битов с битом песни.  
-**Бит**: 1 доля минуты, определяемая BPM песни.  
+**Переменный BPM (Variable BPM)**: Определяет темп песни, но может нерегулярно меняться с одного значения на другое.  
+**Оффсет (Offset)**: разница во времени между началом аудиофайла и первым битом в песне, используется в редакторе для выравнивания линий битов с битом песни.  
+**Бит (Beat)**: 1 доля минуты, определяемая BPM песни.  
 **(Timing) Precision**: точность, измеряемая в долях бита. Например, ¼ precision означает ¼ бита.  
 **Effective BPM (eBPM)**: Скорость, с которой одна рука выполняет движение в ½ precision относительно BPM. Например, eBPM для движения одной рукой с ¼ precision в песне, имеющей 100 BPM, будет 200 BPM.
 
-- **Слайдеры**: eBPM дляThe effective bpm for a slider to the next note is defined as the distance from the last note of the slider to the next note of the same color as the slider.
+- **Слайдеры**: eBPM для слайдера от следующей ноты определяется как расстояние от последней ноты слайдера до следующей ноты того же цвета, что и слайдер.
 
-**Musical Element**: Includes but not limited to: lyrics, sounds produced by instruments, and sounds that are part of a melody, harmony, or beat.  
-**Overmapping**: Placing notes at timings other than those of the instrument(s) that are being followed.  
-**Undermapping**: Mapping to a subset of timings of the instrument(s) that are being followed.
+**Музыкальный элемент (Musical Element)**: включает, но не ограничивается: вокалом, звуками инструментов, а также звуками, являющимися частью мелодии или ритма.  
+**Овермаппинг (Overmapping)**: размещение нот под тайминг, не соответствующий инструментам, которым они следуют.  
+**Андермаппинг (Undermapping)**: использование только части тайминга инструментов, которым следует маппинг.
 
 ### Паттерны
 
-**Объекты**: бомбы, ноты, стены или арки.  
-**Interactive Objects**: Bombs and notes, as well as walls that force you to dodge or duck.  
-**Хитбокс**: An invisible box around an object that is used to detect collisions and cuts.  
-**Swing path**: The path of a swing used to hit a note. Can be divided into the Pre-cut swing and the follow-through swing.
+**Объекты (Objects)**: бомбы, ноты, стены или арки.  
+**Интерактивные объекты (Interactive Objects)**: Бомбы и ноты, а также стены, которые вынуждают игрока уклоняться или приседать.  
+**Хитбокс (Hitbox)**: невидимая область вокруг объекта, используемая для определения столкновений и регистрации разрезов.  
+**Траектория свинга (Swing Path)**: путь движения меча при ударе по ноте. Состоит из двух частей:
 
-- Pre-cut swing: The portion of a swing before making contact with a note.
-- Follow-through swing: The portion of a swing after cutting through the note.
+- Предударный свинг (Pre-cut swing): часть взмаха до контакта с нотой.
+- Свинг после удара (Follow-through swing): часть взмаха после разрезания ноты.
 
-**On the same snap**: Refers to motions that are intended to be made at the same point in time.  
-**Dot Note**: The note type that can be scored on by a cut from any direction.  
-**Слайдер**: A set of notes that follow each other at a set timing precision such that they appear at distinct timings but can still be hit with a single swing. [EXAMPLE](./mapping-criteria.md#slider-examples)  
-**Дабл дирекшионал (ДД)**: Two consecutive notes of the same color in the same direction.  
-**Ресет**: A motion where hand/arm position or rotation are adjusted without a corresponding note for that hand.  
-**Бомб ресет**: Using bombs to force a reset.  
-**Wrist reset**: A motion where hand rotation is adjusted before or during a swing to enable a note to be hit.  
-**Pronation**: The inward rotation of the arm which extends to about 90°-100° from a palm down position.  
-**Supination**: The outward rotation of the arm which extends to about 180°-210° from a palm down position.
+**На одной временной позиции (On the same snap)**: относится к движениям, которые должны быть выполнены в один и тот же момент времени.  
+**Dot Note (точка)**: тип ноты, который можно разрезать ударом с любого направления.  
+**Слайдер (Slider)**: последовательность нот, расположенных с определённой временной точностью таким образом, что они появляются в разные моменты времени, но всё ещё могут быть сыграны одним непрерывным свингом. [ПРИМЕР](./mapping-criteria.md#slider-examples)  
+**Double Directional (ДД)**: две последовательных ноты одного цвета с одинаковым направлением удара (например, синяя нота подразумевает удар вниз, и нота после неё будет подразумевать то же самое).  
+**Ресет (Reset)**: движение, при котором положение или вращение руки корректируется без соответствующей ноты / бомб для этой руки.  
+**Бомб ресет (Bomb Reset)**: использование бомб для принудительного выполнения ресета (например, после определенной секции карты ваши руки находятся внизу, а бомбы вернут их положение вверх).  
+**Ресет кисти (Wrist Reset)**: движение, при котором вращение кисти корректируется до или во время свинга, чтобы сделать возможным попадание по ноте.  
+**Пронация (Pronation)**: вращение руки внутрь, которое может достигать примерно 90°-100° относительно положения ладонью вниз.  
+**Супинация (Supination)**: вращение руки наружу, которое может достигать примерно 180°-210° относительно положения ладонью вниз.
 
 ## Правила
 
-### 1. Gameplay
+### 1. Геймплей
 
-Maps must not require the use of any external mods or programs to play.  
-Maps must be designed to be played without any gameplay modifiers.  
-Maps must be ‘Standard’ game mode maps.  
-Note jump speed must remain constant within each difficulty.
+Карта не должна требовать использования каких-либо сторонних модов или программ для того, чтобы её сыграть.  
+Карта должна быть рассчитана на прохождение без каких-либо игровых модификаторов.  
+Карта должна использовать стандартный режим игры.  
+Скорость появления нот (Note Jump Speed / NJS) должна оставаться постоянной в пределах каждой сложности.
 
 ### 2. Правила
 
-#### A. Mismaps
+#### A. Мисмапы (Mismaps)
 
-A map cannot have any objects that are clearly placed or positioned unintentionally by the mapper.
+Карта не должна содержать объекты, которые явно были размещены непреднамеренно маппером.
 
 #### B. Ноты
 
-Multiple notes of the same color on the same swing must not be parallel to one another. [ПРИМЕР](./mapping-criteria.md#r-2-b-parallel-notes)  
-If there are multiple notes of the same color on the same swing, each note must lead into the expected cut direction of the next note.  
-Multiple notes of the same color on the same snap must not differ in cut direction from each other by more than 45 degrees.  
-Notes must not be placed in the pre-cut swing path of a note of the opposite color. [ПРИМЕР](./mapping-criteria.md#r-2-b-pre-cut-swing-path)  
-Notes should not be placed in the follow-through path of a note of the opposite color ([ПРИМЕР](./mapping-criteria.md#r-2-b-hitboxes)) unless the notes are on the same snap or there is sufficient time for the other color saber to swing clear of the note.  
-No patterns should have a swing path into the bad cut hitbox for a note of the same color in the same swing.  
-Notes must not be placed inside walls or be completely blocked from the player’s view by walls.  
-A pattern must not induce a variation in swing speed within a single swing.  
-A pattern must not be at a significantly higher effective BPM than what is justified within the rest of the map.  
-Dot notes must use angle offsets divisible by 45 degrees.  
-Arrow notes must have an angle offset of 0.  
-Dot notes will be treated as having the most direct possible swing direction of the four face-centered swing directions allowed by the notes orientation. This rule does not apply to multinote hits. [ПРИМЕР](./mapping-criteria.md#r-2-b-dot-note-swing-direction)
+Несколько нот одного цвета, относящихся к одному свингу, не должны быть параллельны друг другу. [ПРИМЕР](./mapping-criteria.md#r-2-b-parallel-notes)  
+Если несколько нот одного цвета относятся к одному свингу, каждая нота должна естественно вести к ожидаемому направлению разреза следующей ноты.  
+Несколько нот одного цвета на одной временной позиции не должны отличаться по направлению разреза более чем на 45 градусов.  
+Ноты не должны размещаться на траектории предударной части свинга ноты противоположного цвета. [ПРИМЕР](./mapping-criteria.md#r-2-b-pre-cut-swing-path)  
+Ноты не должны размещаться на траектории свинга после удара ноты противоположного цвета ([ПРИМЕР](./mapping-criteria.md#r-2-b-hitboxes)), если только они не находятся на одной временной позиции или у меча противоположного цвета есть достаточно времени, чтобы уйти от этой ноты.  
+Ни один паттерн не должен создавать траекторию свинга, проходящую через хитбокс бэдката ноты того же цвета в рамках одного свинга.  
+Ноты не должны размещаться внутри стен или полностью скрываться от игрока стенами.  
+Паттерн не должен вызывать изменение скорости свинга в пределах одного свинга.  
+Паттерн не должен иметь значительно более высокий eBPM, чем это оправдано остальной частью карты.  
+Точки должны использовать угловые смещения, кратные 45 градусам.  
+Ноты со стрелками должны иметь угловое смещение, равное 0.  
+Для точек предполагается наиболее прямое направление свинга из четырёх возможных направлений, допускаемых ориентацией ноты. Это правило не применяется к одновременному удару по нескольким нотам. [ПРИМЕР](./mapping-criteria.md#r-2-b-dot-note-swing-direction)
 
 #### C. Стены
 
-There must not be a wall or combination of walls that force the player to take damage. [ПРИМЕР](./mapping-criteria.md#r-2-c-walls-1)  
-There must not be a wall or combination of walls that force the player into the outside lanes of the playfield.  
-Walls must have positive width.  
-Interactive walls must have a duration of at least 15ms. That allows for 1/16 precision up to 250BPM and ⅛ precision up to 500BPM.  
-Walls in the 4x3 grid must be one of the two standard heights. Full height or crouch wall height. [ПРИМЕР](./mapping-criteria.md#r-2-c-walls-1)  
-A wall inside the 4x3 grid must not extend outside it.
+Не должно существовать стены или комбинации стен, которые вынуждают игрока получать урон. [ПРИМЕР](./mapping-criteria.md#r-2-c-walls-1)  
+Не должно существовать стены или комбинации стен, которые вынуждают игрока перемещаться в крайние ряды игрового поля, или за сетку 4x3.  
+Ширина стен должны быть положительной.  
+Интерактивные стены должны иметь длительность не менее 15 мс. Это позволяет использовать precision 1/16 до 250BPM и precision ⅛ до 500BPM.  
+Стены внутри сетки 4x3 должны иметь одну из двух стандартных высот: полную высоту, или высоту стены для приседания. [ПРИМЕР](./mapping-criteria.md#r-2-c-walls-1)  
+Стены внутри сетки 4x3 не должны выходить за её пределы.
 
 #### D. Бомбы
 
-Bombs must not be placed such that they interfere with the pre-cut or follow-through swing for a note.  
-Bombs must not be placed in a way that forces a saber to stay outside the 4x3 grid in order to avoid contacting the bombs. [ПРИМЕР](./mapping-criteria.md#r-2-d-bombs)  
-Bombs must be accompanied with an acceptable level of lighting.  
-Bombs must not be placed inside of walls or be completely blocked from the player’s view by walls.  
-Bombs may not overlap with other objects in game and must be placed at least 20 ms apart from other bombs in the same space. If the NJS is not too low, that allows for 1/16 precision up to 180 BPM and ⅛ precision up to 360 BPM.
+Бомбы не должны размещаться так, чтобы мешать предударной части свинга или свингу после удара, при ударе по ноте.  
+Бомбы не должны размещаться таким образом, чтобы игроку приходилось удерживать мечи за пределами сетки 4x3 для их обхода. [ПРИМЕР](./mapping-criteria.md#r-2-d-bombs)  
+Бомбы должны сопровождаться достаточным уровнем освещения.  
+Бомбы не должны размещаться внутри стен или полностью скрывать от игрока стенами.  
+Бомбы не могут пересекаться с другими игровыми объектами и должны размещаться с интервалом не менее 20 мс относительно других бомб в той же позиции. Если NJS не слишком низкий, это позволяет использовать precision 1/16 до 180 BPM и precision ⅛ до 360 BPM.
 
 #### E. Арки
 
-Arcs must be connected to a note.  
-Arcs must not be active with notes of the same color not connected with the arc.  
-There can be at most five arcs active per hand.  
-Direction of the arc must match the arrow direction. For dot notes the arc must follow the direction of parity or be neutral (i.e. arc direction 8). Any additional outgoing arcs may differ up to a maximum of 45 degrees away from this direction.  
-The only note in a multinote hit allowed to be attached to an incoming arc is the first note.  
-The only note in a multinote hit allowed to be attached to an outgoing arc is the last note.  
-Notes connected by an arc must be rankable even if the arc was removed.  
-Head and tail multipliers must not be less than 0.1 or exceed 1.5.  
-Arcs must not be misleading. [ПРИМЕР](./mapping-criteria.md#r-2-e-misleading-arcs)
+Арки должны быть соединены с нотой.  
+Во время активности арки, не должно быть нот того же цвета, не связанных с этой аркой.  
+Для каждой руки одновременно может быть активно не более пяти арок.  
+Направление арки должно соответствовать направлению стрелки ноты. Для точек арка должна следовать направлению парити (parity) либо быть нейтральной (т.е направление - 8). Дополнительные исходящие арки могут отклоняться от этого направления максимум на 45 градусов.  
+В одновременном ударе по нескольким нотам только первая нота может быть связана с входящей аркой.  
+В одновременном ударе по нескольким нотам только последняя нота может быть связана с исходящей аркой.  
+Ноты, соединённые с аркой, должны оставаться пригодными для ранкинга даже при удалении арки.  
+Множители головы и хвоста арки не должны быть меньше 0.1 и больше 1.5.  
+Арки не должны вводить игрока в заблуждение. [ПРИМЕР](./mapping-criteria.md#r-2-e-misleading-arcs)
 
 #### F. Чейны
 
@@ -133,26 +133,26 @@ Arcs must not be misleading. [ПРИМЕР](./mapping-criteria.md#r-2-e-misleadi
 
 ### 3. Тайминг
 
-#### A. Setup
+#### A. Настройка
 
-The map’s BPM must perfectly match one of the BPMs of the song or a multiple of one of the BPMs of the song.  
-A map may use the effective BPM of a section during the map as the base BPM as long as the difficulty of the section represents the overall difficulty of the map.  
-Maps with variable BPM timing must be timed as accurately as possible.  
-The map’s offset must be as close to perfect as possible.
+BPM карты должен в точности соответствовать одному из BPM песни, либо быть кратным одному из BPM песни.  
+Карта может использовать eBPM определённого участка в качестве базового BPM, если сложность этого участка отражает общую сложность карты.  
+Карты с переменным BPM должны быть затаймлены настолько точно, насколько это возможно.  
+Оффсет карты должен быть максимально близок к идеальному.
 
 #### B. Ноты
 
-All notes must be perfectly on time to a distinct sound in the music.  
-The first note of a slider must be on time to the sound the slider is mapping. The precision of the following notes may be adjusted for playability.
+Все ноты должны быть идеально синхронизированы со звуками, под которые они поставлены.  
+Первая нота слайдера должна точно совпадать по времени со звуком, который отображает данный слайдер. Precision последующих нот может немного отклоняться от идеала ради улучшения играбельности.
 
 #### C. Андермаппинг
 
-Undermapped sections must not have a single note off time, and each note in an undermapped section must have a corresponding sound in the music.
+В андермапнутых секциях не должно быть ни одной ноты, поставленной не в тайминг. Каждая нота в андермапнутой секции должна соответствовать определённому звуку в песне.
 
 #### D. Овермаппинг
 
-Rhythmic overmapping is not allowed. A single sound cannot be represented by multiple notes unless those notes fall into a single swing.  
-Simplifying timing inconsistencies to match an understandable rhythm is allowed if the inconsistencies do not arise from a BPM or rhythm change.
+Ритмический овермапиинг не допускается. Один звук не может быть представлен несколькими нотами, если только эти ноты не входят в один свинг.  
+Допускается упрощение незначительных несоответствий с таймингом для приведения их к понятному ритму, если эти несоответствия не вызваны изменением BPM или ритма.
 
 ### 4. Форматирование и метаданные
 
@@ -166,39 +166,39 @@ Simplifying timing inconsistencies to match an understandable rhythm is allowed 
 
 #### A. Освещение
 
-A map must have sufficient lighting throughout the song.
+Карта должна иметь достаточное освещение на протяжении всей песни. Отсутствие освещения не допускается (использование программ для автоматической генерации света допустимо).
 
 #### B. Интро/аутро
 
-A map must have an intro period of at least 1.5 seconds with no interactive objects.  
-A map must have an outro period of more than 2 seconds, counting from the end of the last interactive object of the map.  
-A map must have an outro period of less than 15 seconds, counting from the point the last object disappears or the last lighting element change.
+Карта должна иметь интро (вступление) продолжительностью не менее 1.5 секунды без интерактивных объектов.  
+Карта должна иметь аутро (завершающий период) продолжительностью более 2 секунд, отсчитываемое от окончания последнего интерактивного объекта карты.  
+Карта должна иметь аутро (завершающий период) продолжительностью менее 15 секунд, отсчитываемое от момента исчезновения последнего объекта или последнего изменения элемента освещения.
 
 #### C. Аудиодорожка
 
-A map’s audio must not be modified to add excessive amounts of silence anywhere in the song.  
-A map’s audio must consist of musical elements set to an identifiable structure.  
-The length of the map’s audio, ignoring any added silence, must be longer than 20 seconds.
+Аудио карты не должно быть изменено путём добавления **чрезмерного** количества тишины в какой-либо части песни.  
+Аудио карты должно состоять из музыкальных элементов, организованных в распознаваемую структуру на.  
+Длина аудио карты, без учёта добавленной тишины, должна превышать 20 секунд.
 
-#### D. Accompanying Text and Images
+#### D. Сопутствующие текстовые и графические материалы
 
-There must not be nudity, near-nudity, sexual references, extreme violence, gore, substance abuse, or any other form of explicit content anywhere in the files contained in the map.  
-There must not be content that harasses or denigrates any individual or group anywhere in the files contained in the map.
+В файлах карты не должно содержаться наготы, почти полной наготы, сексуальных отсылок, сцен крайнего насилия, расчленения, злоупотребления наркотиками или любого другого откровенного контента.  
+В файлах карты не должно содержаться материалов, направленных на преследование, унижение или дискредитацию какого-либо человека или группы людей.
 
 #### E. Пользовательские названия сложностей
 
-For any game mode in a mapset with a difficulty going for rank:
+Для любого игрового режима в мапсете, содержащего сложности, претендующие на ранкинг:
 
-- Difficulty names must be clearly progressive and accurately indicative of their respective difficulties, excluding the highest difficulty.
-- Difficulty naming must follow a common theme relating to the song or map, unless the difficulty names are abbreviations of the default Beat Saber difficulty names.
-- If there are multiple difficulties with similar relative difficulty, the difficulty names must share a commonality that indicates that they are of the same relative difficulty.
-- Difficulty names must not be so long that they overlap with other UI elements.
-- Difficulty names must not exceed 30 characters in length.
-- Difficulty names must not solely consist of one or more usernames. Words that happen to be usernames are acceptable within difficulty names as long as they relate to the song.
+- Названия сложностей должны чётко отражать прогрессию сложности и соответствовать фактической сложности уровня, за исключением самой высокой сложности в мапсете.
+- Названия сложностей должны следовать общей тематике, связанной с песней или картой, если только они не являются сокращениями стандартных названий сложностей Beat Saber.
+- Если несколько сложностей имеют схожий относительный уровень сложности, их названия должны иметь общий элемент, указывающий на эту схожесть.
+- Названия сложностей не должны быть настолько длинными, что будут перекрывать другие элементы интерфейса.
+- Длина названия сложностей не должна превышать 30 символов.
+- Названия сложностей не должны состоять исключительного из одного или нескольких имён пользователей или мапперов. Слова, которые одновременно являются никнеймами, допускаются, если они связаны с содержанием песни.
 
-#### F. Изменение файла DAT
+#### F. Изменение .DAT файлов
 
-All difficulties in a mapset that are going for rank must not contain any form of unfair modification via editing of the .dat file manually or through external mappers. This includes any form of custom walls, map reversal, and note jumping.
+Все сложности в мапсете, претендующие на ранкинг, не должны содержать каких-либо нечестных модификаций, внесённых путём ручного редактирования .DAT файлов или с помощью сторонних инструментов для маппинга. К таким модификациям относятся любые виды пользовательских стен, реверс карты и т.д.
 
 ## Руководство
 
@@ -206,86 +206,86 @@ All difficulties in a mapset that are going for rank must not contain any form o
 
 #### A. Ресеты
 
-Resetting patterns in a map should allow an appropriate amount of time between the resetting notes, consistent with the difficulty of the map.
+Паттерны, требующие ресета, должны предоставлять достаточно количество времени для выполнения ресета между соответствующими нотами, соразмерно сложности карты
 
-- This includes any of the following: Double directionals, bomb resets, or wrist resets through extreme pronation or supination.
+- К таким случаям относятся: ДД, бомб ресеты, ресеты кисти вызванные экстремальной пронацией или супинацией.
 
 #### B. Слайдеры
 
-Each note in a slider should follow the previous note in the slider with the same timing precision.  
-Sliders should have a speed similar to the general swing speed of the map or have a speed appropriate to the sound being mapped.  
-Sliders should not have direction changes of more than 45 degrees.  
-Sliders should not have more than one direction change.
+Каждая нота в слайдере должна следовать за предыдущей с тем же timing precision.  
+Скорость слайдеров должна быть сопоставима с общей скоростью свингов в карте, либо соответствовать звуку, который они отображают.  
+Слайдеры не должны содержать изменений направления более чем на 45 градусов.  
+Слайдеры не должны содержать более одного изменения направления.
 
-#### C. Collisions
+#### C. Коллизии
 
-There should be no patterns where the arc of the pre-cut swing on one hand overlaps with the pre-cut swing of the other hand. [EXAMPLE](./mapping-criteria.md#g-1-c-pre-cut-collisions)  
-There should be no patterns where the arc of the follow-through swing on one hand overlaps with the follow-through swing of the other hand. [EXAMPLE](./mapping-criteria.md#g-1-c-follow-through-collisions)
+Не должно быть паттернов, в которых дуга предударной части свинга одной руки пересекается с предударной частью свинга другой руки. [ПРИМЕР](./mapping-criteria.md#g-1-c-pre-cut-collisions)  
+Не должно быть паттернов, в которых дуга свинга после удара одной руки пересекается с свингом после удара другой руки. [ПРИМЕР](./mapping-criteria.md#g-1-c-follow-through-collisions)
 
 #### D. Вижн-блоки
 
-No object should impede vision of other interactive objects without an indication and/or implication of where and what the blocked objects will be.
+Ни один объект не должен перекрывать обзор других интерактивных объектов без указания или визуального намёка на их положение и тип.
 
-#### E. Emphasis
+#### E. Акцентирование (Emphasis)
 
-Patterns and sections of a map should not excessively overrepresent the music.  
-Patterns and sections of a map should not excessively exceed the difficulty of the rest of the map unless supported by the music.
+Паттерны и секции карты не должны чрезмерного преувеличивать музыку, под которую они маппятся.  
+Паттерны и секции карты не должны значительно превосходить по сложности остальную часть карты, если это не оправдано музыкой.
 
-#### F. Multinote Hits
+#### F. Одновременные удары по нескольким нотам (Multinote Hits)
 
-The direction of dot notes in multinote hits should accurately and consistently represent the sounds they are mapped to through the map.  
-In a multinote hit, all notes should visually be indicated to be part of the same swing.
+Направления точек в одновременных ударах по нескольким нотам должны быть точно и последовательно отражать звуки, к которым они привязаны, на протяжении всей карты.  
+В одновременном ударе по нескольким нотам все ноты должны визуально восприниматься как часть одного свинга.
 
 ### 2. Тайминг
 
 #### A. Стены
 
-Walls should correspond to a musical element.
+Стены должны использоваться в соответствии с каким-либо музыкальным элементом.
 
 #### B. Бомбы
 
-Bombs should be mapped to a musical element unless used to clarify a reset or set up for a subsequent pattern. In those cases, the bombs should be mapped to a musical element wherever possible.
+Бомбы должны использоваться в соответствии с каким-либо музыкальным элементом, если только они не используются для обозначения ресета и/или подготовки к последующему паттерну. В таких случаях бомбы всё равно должны соответствовать музыкальному элементу, когда это возможно.
 
 #### C. Арки
 
-Arcs should correspond to a musical element.
+Арки должны использоваться в соответствии с каким-либо музыкальным элементом.
 
-## Addendum
+## Дополнение
 
-### 1. Consistency
+### 1. Последовательность
 
-Repeated sections of music should feel similar, and similar sections should not play excessively differently unless there is some change in the music.  
-Within a section, representation of a repeated sound with the same volume and pitch in the absence of other sounds should not excessively change.  
-Mapping decisions around consistent representation should be understandable.
+Повторяющиеся музыкальные секции должны ощущаться схожими при игре, и не должны играться чрезмерно по-разному, если в самой музыке нет соответствующих изменений.  
+В пределах одной секции отображение повторяющегося звука с одинаковой громкостью и высотой тона при отсутствии других звуков не должно существенно изменяться.  
+Решения маппера, связанные с отображением музыки, должны быть понятными и логичными.
 
 ### 2. Вариативность
 
-Varying the mapping as the music changes is important to musical representation. Big changes in the music should correspond to a change in the mapping.  
-This does not require that patterns must change with every change in the music, nor does it disallow variation in sections where the music stays the same.
+Изменение маппинга по мере изменения музыки важно для её корректного отображения. Существенные изменения в музыке должны сопровождаться изменениями в маппинге.  
+Это не означает, что паттерны обязаны меняться при каждом изменении музыки, и не запрещает вариативности в секциях, где музыка остаётся одинаковой.
 
-### 3. Emphasis
+### 3. Акцентирование (Emphasis)
 
-The patterns & lighting used should reflect the intensity level of the music being mapped.  
-The intensity of the mapping in each section relative to other sections should be somewhat in line with the intensity of the music. Deviation is allowed as long as a section’s intensity is not excessively raised or lowered relative to the intensity of the rest of the song.
+Используемые паттерны и освещение должны отражать уровень интенсивности отображаемой музыки.  
+Интенсивность маппинга в каждой секции относительно других секций должна в целом соответствовать интенсивности музыки. Допускаются отклонения, если интенсивность секции не завышена и не занижена чрезмерно по сравнению с остальной частью песни.
 
-## Appendix
+## Приложение
 
-### Rule Explanations and Background
+### Объяснение правил и дополнительная информация
 
 #### R.2.C (Стены)
 
-Thin walls, which have close to 0 duration, are not allowed because they do not consistently damage the player.  
-Fake walls, which have negative width, are not allowed because they are not an intended part of the base game.  
-Fast walls, which have negative duration, are not allowed because they are not an intended part of the base game.
+Тонкие стены, имеющие длительность, близкую к нулю, запрещены, поскольку они не наносят урон игроку стабильно и предсказуемо.  
+Фейковые стены с отрицательной шириной запрещены, поскольку не являются предусмотренной базовой частью игры.  
+Быстрые стены с отрицательной длительностью запрещены, поскольку не являются предусмотренной базовой частью игры.
 
 #### R.6.A (Освещение)
 
-Sufficient lighting means that some form of lighting that follows the music should be present in sections of the map that contain interactive objects. Any form of automatic light generation that creates lighting that fits this criteria is allowed.
+Под достаточным освещением понимается наличие какого-либо освещения, следующего за музыкой, в секциях карты, содержащих интерактивные объекты. Разрешены любые способы автоматической генерации освещения, если итоговый результат соответствует критериям.
 
 #### G.1.E (Вижн-блоки)
 
-When a note is vision blocked, the location should always be deducible from previous note placements.  
-When a note is vision blocked, the cut direction should always be deducible from previous note placements, unless the note is a dot note.
+Если нота перекрыта другим объектом, её расположение всегда должно быть определимо по предыдущим нотам.  
+Если нота перекрыта другим объектом, направление её разреза также должно быть определимо по предыдущим нотам, если только эта нота не является точкой.
 
 ### Изображения
 
@@ -295,75 +295,75 @@ When a note is vision blocked, the cut direction should always be deducible from
 
 #### R.2.B (Параллельные ноты)
 
-These are examples of parallel same color notes on the same snap.  
+Это примеры параллельных нот одного цвета на одной временной позиции.  
 ![Parallel Notes](/images/ranking/mapping-criteria/Picture2.png)
 
-#### R.2.B (Pre-cut Swing Path)
+#### R.2.B (Предударная траектория свинга)
 
-The blue note is in the pre-cut swing path of the red note.  
+Синяя нота находится на траектории предударной части свинга красной ноты.  
 ![Pre-cut Swing Path](/images/ranking/mapping-criteria/Picture3.png)
 
 #### R.2.B (Хитбоксы)
 
-The red up note is in the follow-through path of the blue up note.  
+Красная нота вверх находится на траектории свинга после удара синей ноты вверх.  
 ![Hitboxes](/images/ranking/mapping-criteria/Picture8.png)
 
-#### R.2.B (Dot Note Swing Direction)
+#### R.2.B (Направление свинга точек)
 
-The implicit circling of the dot notes causes a hitbox issue.  
+Подразумеваемая круговая траектория свинга для точек создаёт проблему с хитбоксом.  
 ![Dot Hitbox Circle](/images/ranking/mapping-criteria/dot-hitbox-circle.png)
 
 #### R.2.C (Стены)
 
-These walls force the player to take damage because there is no space for the player to pass through.  
+Эти стены вынуждают игрока получать урон, так как между ними нет места, через которое можно уклониться.  
 ![Walls](/images/ranking/mapping-criteria/Picture4.png)
 
-Full height wall and a crouch wall.  
+Стена с полной высотой и стена для приседания.  
 ![Example walls](/images/ranking/mapping-criteria/walls.png)
 
 #### R.2.D (Бомбы)
 
-These bombs that force a saber to stay outside the 4x3 grid in order to avoid contact.  
+Эти бомбы вынуждают игрока держать мечи за пределами сетки 4x3, чтобы не задеть их.  
 ![Bombs](/images/ranking/mapping-criteria/Picture5.png)
 
-#### R.2.E (Misleading Arcs)
+#### R.2.E (Вводящие в заблуждение арки)
 
-Arc ends prematurely, misleading the player about scoring.  
+Арка заканчивается преждевременно, вводя игрока в заблуждение относительно получения очков.  
 ![Premature-arc](/images/ranking/mapping-criteria/arc-premature-end.png)
 
-Arc suggesting a swing through an opposite colored note.  
+Арка предполагает свинг через ноту противоположного цвета.  
 ![Arc through note](/images/ranking/mapping-criteria/arc-through-note.png)
 
-#### G.1.C (Pre-cut Collisions)
+#### G.1.C (Коллизии предударной части свинга)
 
-The arcs of the pre-cut swings overlap.  
+Траектории преударных частей свинга пересекаются.  
 ![Pre-cut Collisions](/images/ranking/mapping-criteria/Picture6.png)
 
-#### G.1.C (Follow-through Collisions)
+#### G.1.C (Коллизии свинга после удара)
 
-The arcs of the follow-through swings overlap.  
+Траектории свингов после удара пересекаются.  
 ![Follow-through Collisions](/images/ranking/mapping-criteria/Picture7.png)
 
 ### Ссылки
 
-- [Changelog](https://docs.google.com/document/d/1yiaybXp7oLYHPLqQQfwDoNUo5cGCge0n4Jo-V4IpBmA/edit)
-- [ScoreSaber Ranking Criteria v1](https://docs.google.com/document/d/1mtVihRO1LomyptXayoDNDTQYgX_TQPp6ZYDmtwR2jMI/edit)
+- [Журнал изменений](https://docs.google.com/document/d/1yiaybXp7oLYHPLqQQfwDoNUo5cGCge0n4Jo-V4IpBmA/edit)
+- [Ранкинг критерии v1](https://docs.google.com/document/d/1mtVihRO1LomyptXayoDNDTQYgX_TQPp6ZYDmtwR2jMI/edit)
 
 ### Переводы
 
-- [Korean Translation](https://docs.google.com/document/d/1K1iRlM7_kHYbMVzVoUuDmVUl53i3P1D58QapjfNX8Fc/edit#heading=h.3bevwybqdvva)
+- [Корейский перевод](https://docs.google.com/document/d/1K1iRlM7_kHYbMVzVoUuDmVUl53i3P1D58QapjfNX8Fc/edit#heading=h.3bevwybqdvva)
 
-## Credits
+## Благодарности
 
-**Written by:**  
+**Написано:**  
 _Uninstaller  
 Fern_
 
-**WIth Contributions from:**  
+**При участии:**  
 _OrangeW  
 Amanatsu  
 Umbranox  
-The ScoreSaber Ranking Team  
-ScoreSaber Ranking Criteria v1 Contributors_
+Ранкинг команда ScoreSaber  
+Участники создания ранкинг критерии v1_
 
-_Transferred to the Wiki by riasuh_
+_Перенесено на вики пользователем riasuh_
