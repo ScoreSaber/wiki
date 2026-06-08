@@ -42,7 +42,7 @@ title: Введение для новичков
 Вы ещё ни разу не ставили моды на Quest версию Beat Saber?
 Пожалуйста, посетите [BSMG Wiki](https://bsmg.wiki/quest-modding.html) для детального руководства по установке модов на Quest.
 
-## Использование ScoreSaber
+## Использование ScoreSaber [#using-scoresaber]
 
 **Веб-сайт ScoreSaber доступен по ссылке** [https://scoresaber.com/](https://scoresaber.com/)
 

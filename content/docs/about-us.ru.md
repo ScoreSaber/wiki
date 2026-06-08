@@ -8,7 +8,7 @@ title: "О нас"
 [Вы можете увидеть полную команду здесь](https://scoresaber.com/team)
 :::
 :::tip[Если вы хотите знать, что делает каждая команда,]
-[Вы можете найти больше информации здесь](./ranking/scoresaber-team-information.ru.md)  
+[Вы можете найти больше информации здесь](./ranking/scoresaber-team-information.md)  
 :::
 
 ## О ScoreSaber
