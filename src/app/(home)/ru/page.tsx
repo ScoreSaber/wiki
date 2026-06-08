@@ -33,7 +33,7 @@ const content: HomeContent = {
         ["Как мне ранкнуть свою карту?", "/ru/ranking/how-to-rank-map"],
         ["Ранкинг критерии", "/ru/ranking/criteria"],
         ["Правила ранкинг очереди", "/ru/ranking/ranking-queue-rules"],
-        ["Рекомендации для QAT", "/ru/ranking/qat-guidelines"],
+        ["Руководство для QAT", "/ru/ranking/qat-guidelines"],
         ["Информация о моддинг очереди", "/ru/ranking/modding-queue-information"],
         ["Информация о командах ScoreSaber", "/ru/ranking/scoresaber-team-information"],
         ["Система разбана и её условия", "/ru/ranking/ranking-unban-system-and-terms"],
