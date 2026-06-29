@@ -39,5 +39,5 @@ Until further notice the new v4 map format will be unrankable. This will stay in
 - Bursts exceeding 425 BPM
 
 :::tip[Tip]
-The current Ranking Queue Process and Rules [can be found here](/ranking/ranking-queue-rules.md)
+The current Ranking Queue Process and Rules [can be found here](../ranking-queue-rules.md)
 :::
