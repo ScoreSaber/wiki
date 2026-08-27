@@ -1,0 +1,27 @@
+{
+  "files.exclude": {
+    ".next": true,
+    ".source": true,
+    "node_modules": true,
+    "out": true
+  },
+  "search.exclude": {
+    ".next": true,
+    ".source": true,
+    "node_modules": true,
+    "out": true
+  },
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "[javascript]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[javascriptreact]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.oxc": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "npm.scriptRunner": "vp",
+  "oxc.disableNestedConfig": true,
+  "oxc.fmt.disableNestedConfig": true
+}

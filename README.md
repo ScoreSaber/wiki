@@ -8,13 +8,15 @@ If you wish to contribute, [submit a pull request](https://github.com/scoresaber
 
 To run a local copy of the wiki:
 
-1. Install [Bun](https://bun.sh/)
+1. Install [Vite+](https://viteplus.dev/guide/)
 2. [Fork this repo](https://guides.github.com/activities/forking/), then clone it. **Make sure to do all work on [another branch](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository#creating-a-branch).**
-3. Open a command-line window in the directory you just cloned into, then run the command `bun install` to install required packages.
-4. After packages are installed, start the development server with the command `bun run dev`. You can kill the server by closing the terminal or by pressing <kbd>CTRL+C</kbd>
+3. Open a terminal in the cloned directory and run `vp install`.
+4. Start the development server with `vp run dev`. Stop it by closing the terminal or pressing <kbd>CTRL+C</kbd>.
 5. Open the link to [`localhost`](http://localhost:3000/) that appears in the console once the development server is running.
 
 When you make changes to your local wiki files, the local website will update those pages as soon as they are saved!
+
+Run `vp run verify` before committing.
 
 Once you have finished making changes, you can either commit them directly using `git` tools, or copy them into the GitHub web interface if you don't know how to use `git`.
 

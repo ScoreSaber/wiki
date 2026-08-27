@@ -27,8 +27,10 @@ next-env.d.ts
 # Optional REPL history
 .node_repl_history
 
-# VSCode
-.vscode
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
 
 # Compiled Vuepress Files
 wiki/.vuepress/dist

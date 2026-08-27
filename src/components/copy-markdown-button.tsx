@@ -5,7 +5,7 @@ import { Check, Copy } from "lucide-react";
 
 export function CopyMarkdownButton({ markdown }: { markdown: string }) {
   const [checked, onClick] = useCopyButton(() => {
-    navigator.clipboard.writeText(markdown);
+    void navigator.clipboard.writeText(markdown);
   });
 
   return (
