@@ -85,32 +85,32 @@ A map cannot have any objects that are clearly placed or positioned unintentiona
 
 #### B. Notes
 
-Multiple notes of the same color on the same swing must not be parallel to one another. [EXAMPLE](./mapping-criteria.md#r-2-b-parallel-notes)  
+Multiple notes of the same color on the same swing must not be parallel to one another. [EXAMPLE](./mapping-criteria.md#r2b-parallel-notes)  
 If there are multiple notes of the same color on the same swing, each note must lead into the expected cut direction of the next note.  
 Multiple notes of the same color on the same snap must not differ in cut direction from each other by more than 45 degrees.  
-Notes must not be placed in the pre-cut swing path of a note of the opposite color. [EXAMPLE](./mapping-criteria.md#r-2-b-pre-cut-swing-path)  
-Notes should not be placed in the follow-through path of a note of the opposite color ([EXAMPLE](./mapping-criteria.md#r-2-b-hitboxes)) unless the notes are on the same snap or there is sufficient time for the other color saber to swing clear of the note.  
+Notes must not be placed in the pre-cut swing path of a note of the opposite color. [EXAMPLE](./mapping-criteria.md#r2b-pre-cut-swing-path)  
+Notes should not be placed in the follow-through path of a note of the opposite color ([EXAMPLE](./mapping-criteria.md#r2b-hitboxes)) unless the notes are on the same snap or there is sufficient time for the other color saber to swing clear of the note.  
 No patterns should have a swing path into the bad cut hitbox for a note of the same color in the same swing.  
 Notes must not be placed inside walls or be completely blocked from the player’s view by walls.  
 A pattern must not induce a variation in swing speed within a single swing.  
 A pattern must not be at a significantly higher effective BPM than what is justified within the rest of the map.  
 Dot notes must use angle offsets divisible by 45 degrees.  
 Arrow notes must have an angle offset of 0.  
-Dot notes will be treated as having the most direct possible swing direction of the four face-centered swing directions allowed by the notes orientation. This rule does not apply to multinote hits. [EXAMPLE](./mapping-criteria.md#r-2-b-dot-note-swing-direction)
+Dot notes will be treated as having the most direct possible swing direction of the four face-centered swing directions allowed by the notes orientation. This rule does not apply to multinote hits. [EXAMPLE](./mapping-criteria.md#r2b-dot-note-swing-direction)
 
 #### C. Walls
 
-There must not be a wall or combination of walls that force the player to take damage. [EXAMPLE](./mapping-criteria.md#r-2-c-walls-1)  
+There must not be a wall or combination of walls that force the player to take damage. [EXAMPLE](./mapping-criteria.md#r2c-walls)  
 There must not be a wall or combination of walls that force the player into the outside lanes of the playfield.  
 Walls must have positive width.  
 Interactive walls must have a duration of at least 15ms. That allows for 1/16 precision up to 250BPM and ⅛ precision up to 500BPM.  
-Walls in the 4x3 grid must be one of the two standard heights. Full height or crouch wall height. [EXAMPLE](./mapping-criteria.md#r-2-c-walls-1)  
+Walls in the 4x3 grid must be one of the two standard heights. Full height or crouch wall height. [EXAMPLE](./mapping-criteria.md#r2c-walls)  
 A wall inside the 4x3 grid must not extend outside it.
 
 #### D. Bombs
 
 Bombs must not be placed such that they interfere with the pre-cut or follow-through swing for a note.  
-Bombs must not be placed in a way that forces a saber to stay outside the 4x3 grid in order to avoid contacting the bombs. [EXAMPLE](./mapping-criteria.md#r-2-d-bombs)  
+Bombs must not be placed in a way that forces a saber to stay outside the 4x3 grid in order to avoid contacting the bombs. [EXAMPLE](./mapping-criteria.md#r2d-bombs)  
 Bombs must be accompanied with an acceptable level of lighting.  
 Bombs must not be placed inside of walls or be completely blocked from the player’s view by walls.  
 Bombs may not overlap with other objects in game and must be placed at least 20 ms apart from other bombs in the same space. If the NJS is not too low, that allows for 1/16 precision up to 180 BPM and ⅛ precision up to 360 BPM.
@@ -125,7 +125,7 @@ The only note in a multinote hit allowed to be attached to an incoming arc is th
 The only note in a multinote hit allowed to be attached to an outgoing arc is the last note.  
 Notes connected by an arc must be rankable even if the arc was removed.  
 Head and tail multipliers must not be less than 0.1 or exceed 1.5.  
-Arcs must not be misleading. [EXAMPLE](./mapping-criteria.md#r-2-e-misleading-arcs)
+Arcs must not be misleading. [EXAMPLE](./mapping-criteria.md#r2e-misleading-arcs)
 
 #### F. Chains
 
@@ -219,8 +219,8 @@ Sliders should not have more than one direction change.
 
 #### C. Collisions
 
-There should be no patterns where the arc of the pre-cut swing on one hand overlaps with the pre-cut swing of the other hand. [EXAMPLE](./mapping-criteria.md#g-1-c-pre-cut-collisions)  
-There should be no patterns where the arc of the follow-through swing on one hand overlaps with the follow-through swing of the other hand. [EXAMPLE](./mapping-criteria.md#g-1-c-follow-through-collisions)
+There should be no patterns where the arc of the pre-cut swing on one hand overlaps with the pre-cut swing of the other hand. [EXAMPLE](./mapping-criteria.md#g1c-pre-cut-collisions)  
+There should be no patterns where the arc of the follow-through swing on one hand overlaps with the follow-through swing of the other hand. [EXAMPLE](./mapping-criteria.md#g1c-follow-through-collisions)
 
 #### D. Vision Blocks
 

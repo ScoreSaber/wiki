@@ -25,7 +25,7 @@ export default defineConfig({
     },
   },
   staged: {
-    "*.{css,js,json,jsonc,jsx,md,mdx,ts,tsx,yaml,yml}": "vp fmt --write",
+    "*.{css,js,json,jsonc,jsx,ts,tsx,yaml,yml}": "vp fmt --write",
     "*.{js,jsx,ts,tsx}": "vp lint --fix",
   },
   run: {
